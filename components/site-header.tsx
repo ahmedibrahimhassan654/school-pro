@@ -19,48 +19,81 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import {
-  Code,
-  Book,
-  PieChart,
   DollarSign,
-  Fingerprint,
   Bell,
   Menu,
+  Users,
+  Briefcase,
+  BarChart,
+  Handshake,
+  Clipboard,
+  Lock,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { ChevronDown } from "lucide-react";
 import Logo from "./logo";
 
-const features = [
+const features: {
+  icon: React.ComponentType<{ className?: string }>;
+  title: string;
+  description: string;
+  href: string;
+}[] = [
   {
-    icon: Code,
-    title: "Open source",
-    description: "This Pokemon's cry is very loud and distracting",
+    icon: Users,
+    title: "Student Management",
+    description:
+      "Effortlessly manage student enrollment, attendance, and academic records in one place.",
+    href: "/features/student-management",
+  },
+  {
+    icon: Clipboard,
+    title: "Class Scheduling",
+    description:
+      "Simplify timetable creation and ensure smooth class transitions with automated scheduling.",
+    href: "/features/class-scheduling",
+  },
+  {
+    icon: Briefcase,
+    title: "Teacher Management",
+    description:
+      "Organize teacher profiles, schedules, and performance evaluations efficiently.",
+    href: "/features/teacher-management",
   },
   {
     icon: DollarSign,
-    title: "Free for everyone",
-    description: "The fluid of Smeargle's tail secretions changes",
+    title: "Fee Management",
+    description:
+      "Track fee payments, generate invoices, and send automated reminders to parents.",
+    href: "/features/fee-management",
   },
   {
-    icon: Book,
-    title: "Documentation",
-    description: "Yanma is capable of seeing 360 degrees without",
+    icon: BarChart,
+    title: "Performance Analytics",
+    description:
+      "Analyze student and teacher performance with detailed reports and insights.",
+    href: "/features/performance-analytics",
   },
   {
-    icon: Fingerprint,
-    title: "Security",
-    description: "The shell's rounded shape and the grooves on its",
+    icon: Handshake,
+    title: "Parent Communication",
+    description:
+      "Bridge the gap between parents and school with real-time updates and messaging.",
+    href: "/features/parent-communication",
   },
   {
-    icon: PieChart,
-    title: "Analytics",
-    description: "This Pokémon uses its flying ability to quickly chase",
+    icon: Lock,
+    title: "Data Security",
+    description:
+      "Ensure the safety of sensitive school data with advanced encryption and access controls.",
+    href: "/features/data-security",
   },
   {
     icon: Bell,
     title: "Notifications",
-    description: "Combusken battles with the intensely hot flames it spews",
+    description:
+      "Keep everyone informed with instant alerts for announcements, events, and updates.",
+    href: "/features/notifications",
   },
 ];
 
